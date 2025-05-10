@@ -68,4 +68,5 @@ models:
   ## Elementary data quality monitoring configuration
   ## see docs: https://docs.elementary-data.com/
   elementary:
-    +schema: "elementary"  # Schema for storing Elementary test results      
+    +schema: "elementary"  # Schema for storing Elementary test results 
+    +tags: "elementary"     
