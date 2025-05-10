@@ -40,7 +40,7 @@ models:
     # When you rename the project up top, remember to rename it here too. 
       staging:
           # Applies to all files under models/staging 
-          +materialized: view
+          +materialized: table
           # This defaults every model in the staging directory to be materialized as a view in Snowflake. To learn more about materializations: https://docs.getdbt.com/docs/building-a-dbt-project/building-models/materializations
           +schema: "silver"
           # This configuration builds every model in the staging directory into a schema named staging_<target_schema>
@@ -63,6 +63,7 @@ models:
           # This defaults every model in the marts/core directory to be materialized as a table in Snowflake
           +schema: "gold"
           query_tag: dbt_marts   
+<<<<<<< HEAD
           # This applies a query tag named `dbt_marts` to any related queries in Snowflake's Query_History 
 
   ## Elementary data quality monitoring configuration
@@ -70,3 +71,6 @@ models:
   elementary:
     +schema: "elementary"  # Schema for storing Elementary test results 
     +tags: "elementary"     
+=======
+          # This applies a query tag named `dbt_marts` to any related queries in Snowflake's Query_History    
+>>>>>>> 6b602f80ecf74f5614c5d998620c4f20efab74da
